@@ -31,7 +31,7 @@ CheckBtn.addEventListener("click", e =>{
     let inputVal = inputField.value.split('').join(' ');
     if(inputVal == captcha.innerText){ //if captcha matched
        statusTxt.style.color = "#4db2ec";
-        statusTxt.innerText ="Oh bete !!! Moj kr dii "
+        statusTxt.innerText ="Nice! You don't appear to be a robot."
         setTimeout(()=>{
           statusTxt.style.display = "";
           inputField.value = "";
@@ -40,6 +40,6 @@ CheckBtn.addEventListener("click", e =>{
         }, 4000); // removing user entered value and captcha innerText after 4 sec
     }else{
         statusTxt.style.color = "#ff0000" ;
-       statusTxt.innerHTML = "bhaag bsdk. Please try again!"   
+       statusTxt.innerHTML = "Captcha not matched. Please try again!"   
     }
 });
